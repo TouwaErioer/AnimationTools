@@ -1,7 +1,27 @@
 # Animation subtitle tools
 
-* 批量同步字幕（仅支持 ass）
-* 批量字幕重命名
-* 批量去除繁体
-* 批量繁体转简体（仅支持 ass）
-* 批量更改字体（仅支持 ass） todo
+* Synchronize subtitles in batches (ASS only)
+* Batch subtitles rename
+* Batch removal of traditional Chinese
+* Batch transfer from Traditional Chinese to Simplified Chinese (ass only)
+
+# Quick Start
+
+* install Python 3
+
+* install `opencc-python`
+
+  ```bash
+  pip install opencc-python
+  ```
+
+* start
+
+  ```bash
+  cd AnimationTools
+  python run.py
+  ```
+
+# Todo
+
+- [ ] Batch change fonts (ASS only)
