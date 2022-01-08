@@ -1,5 +1,7 @@
 import os
 
+import chardet
+
 
 def input_value(tip):
     value = input(tip)
@@ -39,3 +41,8 @@ def choose_point(name, feature_point, start=0):
             return choose_point(name, feature_point, point_local)
         elif agree == 'y':
             return index
+
+
+def get_file_encoding(file):
+    with open(file, 'rb') as f:
+        return chardet.detect(f.read())['encoding']

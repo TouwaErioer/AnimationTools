@@ -2,7 +2,7 @@ import datetime
 import os
 
 from format.Ass import Ass
-from utils import input_value, input_value_int, get_file_type
+from utils import input_value, input_value_int, get_file_type, get_file_encoding
 
 TEMPLATE = 'Dialogue: '
 DATE_FORMAT = '%H:%M:%S.%f'
@@ -38,7 +38,8 @@ def run():
             if get_file_type(file_name) == 'ass':
                 ass_path = os.path.join(path, file_name)
                 template_path = '%s.bak' % ass_path
-                with open(ass_path, 'r', encoding='UTF-8') as r, open(template_path, 'w', encoding='UTF-8') as w:
+                encoding = get_file_encoding(ass_path)
+                with open(ass_path, 'r', encoding=encoding) as r, open(template_path, 'w', encoding=encoding) as w:
                     for line in r.readlines():
                         w.write(handler(line, operation_num))
                 os.remove(ass_path)
