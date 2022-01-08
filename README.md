@@ -3,7 +3,7 @@
 * Synchronize subtitles in batches (ASS only)
 * Batch subtitles rename
 * Batch removal of traditional Chinese
-* Batch transfer from Traditional Chinese to Simplified Chinese (ass only)
+* Batch transfer from Traditional Chinese to Simplified Chinese (ASS only)
 
 # Quick Start
 
